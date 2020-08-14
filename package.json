@@ -2,7 +2,7 @@
   "name": "abell-plugin-starter",
   "version": "1.0.0",
   "description": "Plugin Starter for Abell v0.4+",
-  "main": "abell.config.js",
+  "main": "plugin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "abell serve",

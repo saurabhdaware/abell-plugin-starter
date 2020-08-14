@@ -1,4 +1,3 @@
-
 /**
  * Executed before build. Access to createContent function makes it ideal for source plugins.
  * @param {import('abell').ProgramInfo} programInfo
@@ -13,13 +12,11 @@ function beforeBuild(programInfo, { createContent }) {
   const sourceNode = {
     slug: 'blog-from-plugin',
     title: 'Hi, This blog comes from plugin',
-    content: `# Hello
-
-    Check out your './plugin/index.js' file.
+    content: `# Hello\nCheck out your './plugin/index.js' file.
     `,
     createdAt: new Date('13 May 2019'),
     modifiedAt: new Date('13 May 2019'),
-    foo: 'bar'
+    foo: 'bar' // can be accessed with meta.foo
   };
 
   createContent(sourceNode);
