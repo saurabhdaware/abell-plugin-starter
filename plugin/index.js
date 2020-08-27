@@ -4,7 +4,7 @@
 */
 
 /**
- * Executed before build. Access to createContent function makes it ideal for source plugins.
+ * Executes before build. Access to createContent function makes it ideal for source plugins.
  * @param {import('abell').ProgramInfo} programInfo
  * @param {object} options
  * @param {Function} options.createContent
@@ -29,7 +29,7 @@ function beforeBuild(programInfo, { createContent }) {
 }
 
 /**
- * Executed after build. Ideal for generating rss, sitemap, etc.
+ * Executes after build. Ideal for generating rss, sitemap, etc.
  * @param {import('abell').ProgramInfo} programInfo
  */
 function afterBuild(programInfo) {
