@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/saurabhdaware/abell-plugin-starter#readme",
   "devDependencies": {
-    "abell": "^0.4.0"
+    "abell": "^0.5.0"
   },
   "peerDependencies": {
-    "abell": "^0.4.0"
+    "abell": "^0.5.0"
   }
 }

@@ -1,3 +1,8 @@
+/*
+  This file contains all the functions that plugins offer.
+  You can delete the functions that are not needed for your plugin.
+*/
+
 /**
  * Executed before build. Access to createContent function makes it ideal for source plugins.
  * @param {import('abell').ProgramInfo} programInfo
@@ -32,4 +37,22 @@ function afterBuild(programInfo) {
 }
 
 
-module.exports = { beforeBuild, afterBuild }
+/**
+ * Executes before write of every HTML file in the output
+ * 
+ * Ideal if you want to alter the HTML output. 
+ * E.g. Minifier plugin, Obfuscators, etc.
+ * 
+ * @param {string} htmlText HTML Code in String
+ * @param {import('abell').ProgramInfo} programInfo
+ * @return {string} New HTML Text
+ */
+function beforeHTMLWrite(htmlText, programInfo) {
+  // This plugin replaces all the 'foo' from your HTML code with 'bar'
+  // There are zero reasons to use this plugin. This is just for an example
+  const newHTMLText = htmlText.replace(/foo/g, 'bar');
+  return newHTMLText;
+}
+
+
+module.exports = { beforeBuild, afterBuild, beforeHTMLWrite }
